@@ -1,0 +1,42 @@
+﻿using Business.Abstract;
+using DataAccess.Abstract;
+using Entities.Concrete;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Business.Concrete
+{
+    public class OrderManager : IOrderService
+    {
+        IOrderDal _orderDal;
+
+        public OrderManager(IOrderDal orderDal)
+        {
+            _orderDal = orderDal;
+        }
+
+        public List<Order> EmployeeID(int id)
+        {
+            return _orderDal.GetAll(p => p.EmployeeID == id);
+        }
+
+        public List<Order> GetAll()
+        {
+            return _orderDal.GetAll();
+        }
+
+        public List<Order> GetAllByEmployeeID(int id)
+        {
+            return _orderDal.GetAll(p => p.EmployeeID == id);
+        }
+
+        public List<Order> GetAllByShipVia(decimal min, decimal max)
+        {
+            return _orderDal.GetAll(p => p.ShipVia >= min && p.ShipVia <= max);
+        }
+
+    }
+}

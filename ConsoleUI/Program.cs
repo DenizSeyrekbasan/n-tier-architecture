@@ -1,9 +1,14 @@
 ﻿using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 
-ProductManager productManager = new ProductManager(new InMemoryProductDal());
+CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
 
-foreach (var item in productManager.GetAll())
+if (true)
 {
-    Console.WriteLine(item.ProductName);
+    foreach (var customer in customerManager.GetAllByCountry("Germany"))
+    {
+        Console.WriteLine(customer.CustomerId);
+    }
 }
+Console.WriteLine("no data found !");
