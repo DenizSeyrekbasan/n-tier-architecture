@@ -1,14 +1,13 @@
-﻿using Business.Concrete;
+﻿using Business.Abstract;
+using Business.Concrete;
+using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
+using System.Linq.Expressions;
 
-CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+ProductManager productManager = new ProductManager(new EfProductDal());
 
-if (true)
+foreach (var item in productManager.GetProductDetails())
 {
-    foreach (var customer in customerManager.GetAllByCountry("Germany"))
-    {
-        Console.WriteLine(customer.CustomerId);
-    }
+    Console.WriteLine(item.ProductName + "/" + item.CategoryName);
 }
-Console.WriteLine("no data found !");
