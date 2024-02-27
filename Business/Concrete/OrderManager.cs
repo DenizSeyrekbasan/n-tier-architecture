@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -18,24 +19,24 @@ namespace Business.Concrete
             _orderDal = orderDal;
         }
 
-        public List<Order> EmployeeID(int id)
+        public IDataResult<List<Order>> EmployeeID(int id)
         {
-            return _orderDal.GetAll(p => p.EmployeeID == id);
+            return new SuccessDataResult<List<Order>>(_orderDal.GetAll(p => p.EmployeeID == id));
         }
 
-        public List<Order> GetAll()
+        public IDataResult<List<Order>> GetAll()
         {
-            return _orderDal.GetAll();
+            return new SuccessDataResult<List<Order>>(_orderDal.GetAll());
         }
 
-        public List<Order> GetAllByEmployeeID(int id)
+        public IDataResult<List<Order>> GetAllByEmployeeID(int id)
         {
-            return _orderDal.GetAll(p => p.EmployeeID == id);
+            return new SuccessDataResult<List<Order>>(_orderDal.GetAll(p => p.EmployeeID == id));
         }
 
-        public List<Order> GetAllByShipVia(decimal min, decimal max)
+        public IDataResult<List<Order>> GetAllByShipVia(decimal min, decimal max)
         {
-            return _orderDal.GetAll(p => p.ShipVia >= min && p.ShipVia <= max);
+            return new SuccessDataResult<List<Order>>(_orderDal.GetAll(p => p.ShipVia >= min && p.ShipVia <= max));
         }
 
     }

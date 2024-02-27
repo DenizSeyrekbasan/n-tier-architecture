@@ -1,9 +1,11 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,19 +20,19 @@ namespace Business.Concrete
             _employeeDal = employeeDal;
         }
 
-        public List<Employee> GetAll()
+        public IDataResult<List<Employee>> GetAll()
         {
-            return _employeeDal.GetAll();
+            return new SuccessDataResult<List<Employee>> (_employeeDal.GetAll());
         }
 
-        public List<Employee> GetByReports(int min, int max)
+        public IDataResult<List<Employee>> GetByReports(int min, int max)
         {
-            return _employeeDal.GetAll(p => p.ReportsTo >= min && p.ReportsTo <= max);
+            return new SuccessDataResult<List<Employee>> (_employeeDal.GetAll(p => p.ReportsTo >= min && p.ReportsTo <= max));
         }
 
-        public List<Employee> GetByTitle(string title)
+        public  IDataResult<List<Employee>> GetByTitle(string title)
         {
-            return _employeeDal.GetAll(p => p.Title == title);
+            return new SuccessDataResult<List<Employee>> (_employeeDal.GetAll(p => p.Title == title));
         }
     }
 }

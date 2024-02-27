@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace Business.Abstract
 {
     public interface IOrderDetailService
     {
-        List<OrderDetail> GetAll();
-        List<OrderDetail> GetByOrderId(int id);
-        List<OrderDetail> GetByQuantity(int count);
-        List<OrderDetail> GetByUnitPrice(int price);
+        IDataResult<List<OrderDetail>> GetAll();
+        IDataResult<List<OrderDetail>> GetByOrderId(int id);
+        IDataResult<List<OrderDetail>> GetByQuantity(int count);
+        IDataResult<List<OrderDetail>> GetByUnitPrice(int price);
     }
 }

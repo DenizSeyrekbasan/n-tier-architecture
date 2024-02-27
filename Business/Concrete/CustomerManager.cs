@@ -1,9 +1,11 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,19 +20,19 @@ namespace Business.Concrete
             _customerDal = customerDal;
         }
 
-        public List<Customer> GetAll()
+        public IDataResult<List<Customer>> GetAll()
         {
-            return _customerDal.GetAll();
+            return new SuccessDataResult<List<Customer>> (_customerDal.GetAll());
         }
 
-        public List<Customer> GetAllByContactTitle(string contactTitle)
+        public IDataResult<List<Customer>> GetAllByContactTitle(string contactTitle)
         {
-            return _customerDal.GetAll(p => p.ContactTitle == contactTitle);
+            return new SuccessDataResult<List<Customer>> (_customerDal.GetAll(p => p.ContactTitle == contactTitle));
         }
 
-        public List<Customer> GetAllByCountry(string country)
+        public IDataResult<List<Customer>> GetAllByCountry(string country)
         {
-            return _customerDal.GetAll(p => p.Country == country);
+            return new SuccessDataResult<List<Customer>> (_customerDal.GetAll(p => p.Country == country));
         }
     }
 }

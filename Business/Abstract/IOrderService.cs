@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,8 @@ namespace Business.Abstract
 {
     public interface IOrderService
     {
-        List<Order> GetAll();
-        List<Order> GetAllByEmployeeID(int id);
-        List<Order> GetAllByShipVia(decimal min, decimal max);
+        IDataResult<List<Order>> GetAll();
+        IDataResult<List<Order>> GetAllByEmployeeID(int id);
+        IDataResult<List<Order>> GetAllByShipVia(decimal min, decimal max);
     }
 }

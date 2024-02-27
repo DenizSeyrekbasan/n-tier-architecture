@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,8 @@ namespace Business.Abstract
 {
     public interface IEmployeeService
     {
-        List<Employee> GetAll();
-        List<Employee> GetByReports(int min, int max);
-        List<Employee> GetByTitle(string title);
+        IDataResult<List<Employee>> GetAll();
+        IDataResult<List<Employee>> GetByReports(int min, int max);
+        IDataResult<List<Employee>> GetByTitle(string title);
     }
 }
