@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -19,6 +20,19 @@ namespace Business.Concrete
             _orderDal = orderDal;
         }
 
+        public IResult Add(Order order)
+        {
+            _orderDal.Add(order);
+            return new SuccessResult(Messages.OrderAdded);
+        }
+
+        public IResult Delete(int id)
+        {
+            var data = _orderDal.Get(p => p.OrderID == id);
+            _orderDal.Delete(data);
+            return new SuccessResult(Messages.OrderDeleted);
+        }
+
         public IDataResult<List<Order>> EmployeeID(int id)
         {
             return new SuccessDataResult<List<Order>>(_orderDal.GetAll(p => p.EmployeeID == id));
@@ -29,9 +43,9 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Order>>(_orderDal.GetAll());
         }
 
-        public IDataResult<List<Order>> GetAllByEmployeeID(int id)
+        public IDataResult<List<Order>> GetById(int id)
         {
-            return new SuccessDataResult<List<Order>>(_orderDal.GetAll(p => p.EmployeeID == id));
+            return new SuccessDataResult<List<Order>>(_orderDal.GetAll(p => p.OrderID == id));
         }
 
         public IDataResult<List<Order>> GetAllByShipVia(decimal min, decimal max)
@@ -39,5 +53,10 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Order>>(_orderDal.GetAll(p => p.ShipVia >= min && p.ShipVia <= max));
         }
 
+        public IResult Update(Order order)
+        {
+            _orderDal.Update(order);
+            return new SuccessResult(Messages.OrderUpdated);
+        }
     }
 }

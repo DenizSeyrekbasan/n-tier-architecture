@@ -18,6 +18,8 @@ namespace Business.Abstract
         IDataResult<List<ProductDetailDto>> GetProductDetails();
         IDataResult<Product> GetById(int productId); //product detail page
         IResult Add(Product product);
+        IResult Delete(int id);
+        IResult Update(Product product);
 
 
     }
