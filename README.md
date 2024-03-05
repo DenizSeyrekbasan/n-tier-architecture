@@ -8,7 +8,6 @@ Bu proje, .NET Core teknolojisi kullanılarak geliştirilmiş, kurumsal düzeyde
 - Entity Framework Core
 - Generic Repository Pattern
 - RESTful API
-- Magic Strings
 - SOLID Prensipleri
 - LINQ
 - Autofac (IoC Container)
