@@ -7,6 +7,7 @@ Bu proje, .NET Core teknolojisi kullanılarak geliştirilmiş, kurumsal düzeyde
 - .NET Core
 - Entity Framework Core
 - Generic Repository Pattern
+- Adapter Design Pattern
 - RESTful API
 - SOLID Prensipleri
 - LINQ
