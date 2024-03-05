@@ -1,12 +1,7 @@
-﻿using Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Core.Entities;
 
 namespace Entities.DTOs
-{   
+{
     public class ProductDetailDto : IDto
     {
         //IEntity'den inheritance edilmiyor cunku burasi bir db tablosu degil
