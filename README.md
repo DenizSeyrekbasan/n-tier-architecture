@@ -34,15 +34,6 @@ This project encompasses a backend application developed using .NET Core technol
 - **Logging**: Logging system for tracking application operations and error handling.
 - **Security**: Hashing and encryption for secure storage and transmission of user passwords.
 
-## Usage
-
-Add usage steps for the project here. For example:
-
-1. Download or clone the project folder.
-2. Install necessary dependencies (`dotnet restore`).
-3. Perform database configuration (`dotnet ef database update`).
-4. Run the application (`dotnet run`).
-
 
 ## Contribution
 
@@ -87,15 +78,6 @@ Bu proje, .NET Core teknolojisi kullanılarak geliştirilmiş, kurumsal düzeyde
 - **Validation**: Kullanıcı girişlerinin doğrulanması için Fluent Validation kullanımı.
 - **Logging**: Uygulama üzerinde yapılan işlemlerin izlenmesi ve hata takibi için loglama sistemi.
 - **Security**: Kullanıcı şifrelerinin güvenli bir şekilde saklanması ve iletilmesi için hashing ve encryption kullanımı.
-
-## Kullanım
-
-Projenin kullanımıyla ilgili adımları buraya ekleyin. Örneğin:
-
-1. Proje klasörünü indirin veya klonlayın.
-2. Gerekli bağımlılıkları yükleyin (`dotnet restore`).
-3. Veritabanı yapılandırmasını gerçekleştirin (`dotnet ef database update`).
-4. Uygulamayı çalıştırın (`dotnet run`).
 
 
 ## Katkı
