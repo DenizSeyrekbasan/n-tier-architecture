@@ -40,7 +40,7 @@ This project encompasses a backend application developed using .NET Core technol
 If you encounter any issues with the project or wish to contribute, please open an issue or submit a pull request.
 
 
-# ///////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////
 
 
 # .NET Core Kurumsal Mimariye Uygun Backend Projesi
