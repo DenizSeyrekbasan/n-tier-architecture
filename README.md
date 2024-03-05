@@ -1,3 +1,57 @@
+# .NET Core Enterprise-Grade Backend Project
+
+This project encompasses a backend application developed using .NET Core technology, tailored for enterprise-level usage. Below, you'll find detailed information about the project's content and the technical selections made.
+
+## Technologies and Concepts
+
+- .NET Core
+- Entity Framework Core
+- Generic Repository Pattern
+- Adapter Design Pattern
+- RESTful API
+- SOLID Principles
+- LINQ
+- Autofac (IoC Container)
+- Fluent Validation
+- Aspect-Oriented Programming (AOP)
+- JSON Web Token (JWT)
+- Cache Management
+- Transactional Management
+- Performance Enhancements
+
+## Project Content
+
+- **Layered Architecture**: Includes Data Access, Business Logic, and API communication layers.
+- **Abstract and Concrete Folders**: Contains abstract and concrete objects, interfaces, and base classes.
+- **IoC Container (Autofac)**: Reduces dependencies using the Inversion of Control principle.
+- **DTO (Data Transformation Object)**: Facilitates data transformations while retrieving data from database tables.
+- **Result and DataResult Classes**: Standardizes operation results.
+- **Utilities Folder**: Holds commonly used tools.
+- **Middleware**: Common functionalities such as JWT authorization and error handling.
+- **Cache Mechanism**: Data storage strategy for performance enhancement.
+- **Transactional Management**: Ensures consistency in database operations.
+- **Validation**: Use of Fluent Validation for validating user inputs.
+- **Logging**: Logging system for tracking application operations and error handling.
+- **Security**: Hashing and encryption for secure storage and transmission of user passwords.
+
+## Usage
+
+Add usage steps for the project here. For example:
+
+1. Download or clone the project folder.
+2. Install necessary dependencies (`dotnet restore`).
+3. Perform database configuration (`dotnet ef database update`).
+4. Run the application (`dotnet run`).
+
+
+## Contribution
+
+If you encounter any issues with the project or wish to contribute, please open an issue or submit a pull request.
+
+
+# ////////////////////////////////////////////////////////////////////////////
+
+
 # .NET Core Kurumsal Mimariye Uygun Backend Projesi
 
 Bu proje, .NET Core teknolojisi kullanılarak geliştirilmiş, kurumsal düzeyde bir backend uygulamasını içermektedir. Aşağıda proje içeriği ve yapılan teknik seçimler hakkında detaylı bilgi bulabilirsiniz.
@@ -42,6 +96,7 @@ Projenin kullanımıyla ilgili adımları buraya ekleyin. Örneğin:
 2. Gerekli bağımlılıkları yükleyin (`dotnet restore`).
 3. Veritabanı yapılandırmasını gerçekleştirin (`dotnet ef database update`).
 4. Uygulamayı çalıştırın (`dotnet run`).
+
 
 ## Katkı
 
