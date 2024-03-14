@@ -8,6 +8,7 @@ This project encompasses a backend application developed using .NET Core technol
 - Entity Framework Core
 - Generic Repository Pattern
 - Adapter Design Pattern
+- Chain of Responsibility
 - RESTful API
 - SOLID Principles
 - LINQ
@@ -53,6 +54,7 @@ Bu proje, .NET Core teknolojisi kullanılarak geliştirilmiş, kurumsal düzeyde
 - Entity Framework Core
 - Generic Repository Pattern
 - Adapter Design Pattern
+- - Chain of Responsibility
 - RESTful API
 - SOLID Prensipleri
 - LINQ
